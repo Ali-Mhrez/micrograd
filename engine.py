@@ -31,7 +31,7 @@ class Value:
         return out
 
     def __pow__(self, other):
-        assert isinstance(other, (int, float)),
+        assert isinstance(other, (int, float))
         out = Value(self.data**other, (self,), f'**{other}')
 
         def _backward():
